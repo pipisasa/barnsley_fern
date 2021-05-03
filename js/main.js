@@ -1,10 +1,13 @@
-const size = 500;
+const size = 2000;
 
 const cnv = document.createElement("canvas");
 cnv.setAttribute("id", "myCanvas");
 cnv.setAttribute("width", size);
 cnv.setAttribute("height", size);
 cnv.style.backgroundColor = '#ccc';
+cnv.style.height = '100vh';
+cnv.style.margin = '0 auto';
+cnv.style.display = 'block';
 document.body.appendChild(cnv);
 
 const ctx = cnv.getContext("2d");
@@ -75,7 +78,7 @@ let x = 0;
 let y = 0;
 
 setInterval(()=>{
-  for(let i = 0; i < 1000; i++){
+  for(let i = 0; i < 2000; i++){
     drawPoint(x, y);
     let nextVal = getNextValue(x, y);
     x=nextVal.x;
